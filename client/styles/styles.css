@@ -1,5 +1,134 @@
 :root {
-  --color: white;
+  --color-brand-teal: #0eb2b0;
+  --color-brand-green: #37b96a;
+  --color-brand-blue: #03496f;
+
+  --color-brand-yellow: #e9c408;
+  --color-brand-orange: #b76f17;
+  --color-brand-red: #ce2630;
+  --color-brand-purple: #644897;
+
+  --color-bg: #f5f2e8;
+  --color-surface: #ffffff;
+  --color-surface-warm: #ede8d6;
+
+  --color-neutral: #b9b28e;
+  --color-neutral-light: #d8d2b8;
+  --color-neutral-dark: #6f694f;
+
+  --color-text: #252525;
+  --color-text-secondary: #5f5b4a;
+  --color-text-muted: #88836f;
+  --color-text-on-dark: #ffffff;
+
+  --color-border: #d8d2b8;
+  --color-border-dark: #b9b28e;
+
+  --color-success: #157862;
+  --color-warning: #e9c408;
+  --color-danger: #ce2630;
+  --color-info: #0eb2b0;
+
+  --color-primary: #0eb2b0;
+  --color-primary-hover: #087f7e;
+  --color-primary-light: #ddf3f1;
+
+  --color-secondary: #644897;
+  --color-secondary-hover: #4f377a;
+  --color-secondary-light: #e9e3f3;
+
+  --color-dark: #321434;
+  --color-dark-secondary: #03496f;
+  --color-dark-surface: #133b4d;
+
+  --font-family:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.7;
+
+  --content-width: 1200px;
+  --content-width-wide: 1400px;
+
+  --navbar-height: 72px;
+
+  --page-padding: 2rem;
+  --section-spacing: 4rem;
+
+  --mobile-breakpoint: 768px;
+  --tablet-breakpoint: 1024px;
+  --desktop-breakpoint: 1200px;
+
+  --mobile-page-padding: 1rem;
+  --tablet-page-padding: 1.5rem;
+
+  --mobile-section-spacing: 2.5rem;
+  --tablet-section-spacing: 3rem;
+
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+
+  --navbar-padding-x: 2rem;
+  --navbar-gap: 1.5rem;
+
+  --mobile-navbar-height: 64px;
+  --mobile-navbar-padding-x: 1rem;
+
+  --mobile-menu-width: 280px;
+
+  --button-height: 44px;
+  --button-height-sm: 36px;
+  --button-height-lg: 52px;
+
+  --mobile-button-height: 48px;
+
+  --button-padding-x: 1.25rem;
+  --button-padding-x-mobile: 1rem;
+
+  --input-height: 44px;
+  --mobile-input-height: 48px;
+
+  --input-padding-x: 0.875rem;
+
+  --form-max-width: 500px;
+
+  --card-padding: 1.5rem;
+  --card-padding-mobile: 1rem;
+
+  --card-gap: 1.5rem;
+  --card-gap-mobile: 1rem;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-round: 999px;
+
+  --shadow-sm: 0 2px 6px rgba(50, 20, 52, 0.08);
+  --shadow-md: 0 4px 14px rgba(50, 20, 52, 0.12);
+  --shadow-lg: 0 8px 28px rgba(50, 20, 52, 0.16);
+
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-navbar: 300;
+  --z-overlay: 400;
+  --z-modal: 500;
+  --z-toast: 600;
 }
 
 body {
