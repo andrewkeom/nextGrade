@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Log In - nextGrade</title>
     <link href="/client/styles/reset.css" rel="stylesheet" />
     <link href="/client/styles/styles.css" rel="stylesheet" />
   </head>
@@ -41,7 +41,7 @@
     <main>
       <section>
         <h2>Welcome back</h2>
-        <form>
+        <form id="login-form">
           <input type="email" placeholder="Enter your email" id="email" />
           <input
             type="password"
@@ -51,9 +51,7 @@
           <button type="submit">Log in</button>
         </form>
         <div class="error-section">
-          <p>Invalid email or password</p>
-          <p>Account doesn't exist</p>
-          <p>Something went wrong</p>
+          <p id="error-message" hidden></p>
         </div>
         <hr />
         <p>

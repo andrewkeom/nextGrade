@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Dashboard - nextGrade</title>
     <link href="/client/styles/reset.css" rel="stylesheet" />
     <link href="/client/styles/styles.css" rel="stylesheet" />
   </head>
@@ -46,45 +46,53 @@
 
       <section>
         <h2>My Children</h2>
-        <div class="child-grid" id="child-grid">LOADED THRU JS</div>
-        <div>
-          <p>Child Name</p>
-          <p>Child Grade</p>
-          <button>View Curriculum</button>
-          <button>Browse books</button>
-        </div>
+        <div class="child-grid" id="child-grid"></div>
+        <template id="child-card-template">
+          <div>
+            <p>Child Name</p>
+            <p>Child Grade</p>
+            <button>View Curriculum</button>
+            <button>Browse books</button>
+          </div>
+        </template>
       </section>
 
       <section>
         <h2>My Listings</h2>
         <div>
-          <p>Active listings: <span>e.g. 1</span></p>
-          <p>Sold: <span>e.g. 1</span></p>
-          <p>Pending: <span>e.g. 1</span></p>
+          <p>Active listings: <span id="active-listings-count">e.g. 1</span></p>
+          <p>Sold: <span id="sold-listings-count">e.g. 1</span></p>
+          <p>Pending: <span id="pending-listings-count">e.g. 1</span></p>
         </div>
         <a href="/client/pages/"><button>View My Listings</button></a>
       </section>
 
       <section>
         <h2>Messages</h2>
-        <p>You have <span>e.g. 2</span> unread messages.</p>
+        <p>
+          You have <span id="unread-messages-count">e.g. 2</span> unread
+          messages.
+        </p>
         <button>View Messages</button>
       </section>
 
       <section>
         <h2>Price Reports</h2>
         <p>No pending price reports.</p>
-        <p><span>e.g. 1</span> listing has a pending price report.</p>
+        <p>
+          <span id="pending-price-reports-count">e.g. 1</span> listing has a
+          pending price report.
+        </p>
       </section>
 
       <section>
         <h2>Quick Actions</h2>
         <div>
-          <button id="marketplace">Browse Marketplace</button>
-          <button id="curriculum">Browse Curriculum</button>
-          <button id="list">List a Book</button>
-          <button id="listings">My Listings</button>
-          <button id="message">Messages</button>
+          <button id="qa-marketplace">Browse Marketplace</button>
+          <button id="qa-curriculum">Browse Curriculum</button>
+          <button id="qa-list">List a Book</button>
+          <button id="qa-listings">My Listings</button>
+          <button id="qa-message">Messages</button>
         </div>
       </section>
     </main>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - nextGrade</title>
+    <link href="/client/styles/reset.css" rel="stylesheet" />
+    <link href="/client/styles/styles.css" rel="stylesheet" />
+    <link href="/client/styles/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- HEADER SECTION -->
+    <header>
+      <nav class="navbar">
+        <a href="/client/index.html"
+          ><img src="/client/assets/logo.png" alt="logo" class="navbar-logo"
+        /></a>
+        <ul class="navbar-list-middle">
+          <li>
+            <a href="/client/pages/dashboard.html" id="dashboard">Dashboard</a>
+          </li>
+          <li>
+            <a href="/client/pages/curriculum.html" id="curriculum"
+              >Curriculum</a
+            >
+          </li>
+          <li><a href="/client/pages/" id="marketplace">Marketplace</a></li>
+          <li><a href="/client/pages/" id="listings">My Listings</a></li>
+          <li><a href="/client/pages/" id="messages">Messages</a></li>
+          <li><a href="/client/pages/" id="disputes">Disputes</a></li>
+        </ul>
+
+        <ul class="navbar-list-right">
+          <a href="/client/pages/profile.html" id="profile">Profile</a>
+          <a href="/client/pages/login.html" id="login">Log In</a>
+          <a href="/client/pages/signup.html" id="signup">Sign Up</a>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN SECTION -->
+    <main>
+      <section>
+        <h1>My Profile</h1>
+        <form id="profile-form">
+          <input type="text" placeholder="Full name" id="name" />
+          <input type="email" placeholder="Email" id="email" />
+          <button type="submit">Save Changes</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Change Password</h2>
+        <form id="change-password-form">
+          <input
+            type="password"
+            placeholder="Current password"
+            id="currentPassword"
+          />
+          <input type="password" placeholder="New password" id="newPassword" />
+          <input
+            type="password"
+            placeholder="Confirm new password"
+            id="confirmNewPassword"
+          />
+          <button type="submit">Update Password</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>My Children</h2>
+        <div class="child-grid" id="child-grid"></div>
+        <template id="child-card-template">
+          <div>
+            <p>Child Name</p>
+            <p>Child Grade</p>
+            <button>Edit</button>
+            <button>Remove</button>
+          </div>
+        </template>
+        <button type="button" id="add-child-btn">+ Add child</button>
+      </section>
+
+      <section>
+        <button type="button" id="logout-btn">Log Out</button>
+      </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+      <div class="footer-upper">
+        <div class="footer-upper-left">
+          <h3>nextGrade</h3>
+          <p>
+            A school community marketplace for buying, trading, and donating
+            curriculum books.
+          </p>
+        </div>
+        <div class="footer-upper-right">
+          <ul>
+            <li>Home</li>
+            <li>Curriculum</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-text">&copy; 2026 nextGrade. All rights reserved.</p>
+    </footer>
+
+    <script src=""></script>
+  </body>
+</html>

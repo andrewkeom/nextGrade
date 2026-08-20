@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Marketplace - nextGrade</title>
     <link href="/client/styles/reset.css" rel="stylesheet" />
     <link href="/client/styles/styles.css" rel="stylesheet" />
-    <link href="/client/styles/index.css" rel="stylesheet" />
   </head>
   <body>
     <!-- HEADER SECTION -->
@@ -51,32 +50,33 @@
       </section>
 
       <section>
-        <input type="search" placeholder="Search a book" />
+        <input type="search" placeholder="Search a book" id="listing-search" />
       </section>
 
       <section>
         <div class="listing-grid" id="listing-grid"></div>
-        <div>
-          <img src="" />
-          <h3>Subject - Grade <span>e.g. 2</span></h3>
-          <p>Book title, Author</p>
-          <p>Reference Price: <span>e.g. 10$</span></p>
-          <button>View Marketplace Listings</button>
-          <span>DIFFERENT CONDITIONS</span>
-          <p>Listing Type: <span>Sell</span></p>
-          <!-- Sell - Trade - Donate -->
+        <template id="listing-card-template">
           <div>
-            <p>Asking Price: <span>e.g. 25$</span></p>
-            <!-- What the parent thinks the book should be sold at -->
-            <p>AI suggested price: <span>e.g. 30$</span></p>
+            <img src="" />
+            <h3>Subject - Grade <span>e.g. 2</span></h3>
+            <p>Book title, Author</p>
+            <p>Reference Price: <span>e.g. 10$</span></p>
+            <span>DIFFERENT CONDITIONS</span>
+            <p>Listing Type: <span>Sell</span></p>
+            <!-- Sell - Trade - Donate -->
+            <div>
+              <p>Asking Price: <span>e.g. 25$</span></p>
+              <!-- What the parent thinks the book should be sold at -->
+              <p>AI suggested price: <span>e.g. 30$</span></p>
+            </div>
+            <div>
+              <p>Free</p>
+              <p>Trade</p>
+            </div>
+            <p>PARENT NAME</p>
+            <button>View Listing</button>
           </div>
-          <div>
-            <p>Free</p>
-            <p>Trade</p>
-          </div>
-          <p>PARENT NAME</p>
-          <button>View Listing</button>
-        </div>
+        </template>
         <div>
           <p>No listings available.</p>
         </div>

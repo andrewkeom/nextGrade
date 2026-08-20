@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Sign Up - nextGrade</title>
     <link href="/client/styles/reset.css" rel="stylesheet" />
     <link href="/client/styles/styles.css" rel="stylesheet" />
   </head>
@@ -18,7 +18,11 @@
           <li>
             <a href="/client/pages/dashboard.html" id="dashboard">Dashboard</a>
           </li>
-          <li><a href="/client/pages/curriculum.html" id="curriculum">Curriculum</a></li>
+          <li>
+            <a href="/client/pages/curriculum.html" id="curriculum"
+              >Curriculum</a
+            >
+          </li>
           <li><a href="/client/pages/" id="marketplace">Marketplace</a></li>
           <li><a href="/client/pages/" id="listings">My Listings</a></li>
           <li><a href="/client/pages/" id="messages">Messages</a></li>
@@ -52,31 +56,36 @@
           <input
             type="password"
             placeholder="Confirm your password"
-            id="password"
+            id="confirmPassword"
           />
           <p>Add your child</p>
-          <input type="text" id="childName" />
-          <select id="select">
-            <option id="grade1">1st Grade</option>
-            <option id="grade2">2nd Grade</option>
-            <option id="grade3">3rd Grade</option>
-            <option id="grade4">4th Grade</option>
-            <option id="grade5">5th Grade</option>
-            <option id="grade6">6th Grade</option>
-            <option id="grade7">7th Grade</option>
-            <option id="grade8">8th Grade</option>
-            <option id="grade9">9th Grade</option>
-            <option id="grade10">10th Grade</option>
-            <option id="grade11">11th Grade</option>
-            <option id="grade12">12th Grade</option>
-          </select>
-          <!-- NEED TO CREATE -> ADD A CHILD BUTTON AND LOGIC BEHIND -->
+          <!-- Grade option values are placeholder grade_level ids; once
+               curriculum.php exists, this select will be populated per-school
+               from the grade_levels table instead of hardcoded here. -->
+          <div id="children-container">
+            <input type="text" id="childName" placeholder="Child's name" />
+            <select id="gradeLevel">
+              <option id="grade1" value="1">1st Grade</option>
+              <option id="grade2" value="2">2nd Grade</option>
+              <option id="grade3" value="3">3rd Grade</option>
+              <option id="grade4" value="4">4th Grade</option>
+              <option id="grade5" value="5">5th Grade</option>
+              <option id="grade6" value="6">6th Grade</option>
+              <option id="grade7" value="7">7th Grade</option>
+              <option id="grade8" value="8">8th Grade</option>
+              <option id="grade9" value="9">9th Grade</option>
+              <option id="grade10" value="10">10th Grade</option>
+              <option id="grade11" value="11">11th Grade</option>
+              <option id="grade12" value="12">12th Grade</option>
+            </select>
+          </div>
+          <button type="button" id="add-child-btn">+ Add another child</button>
           <button type="submit">Sign up</button>
         </form>
         <hr />
         <p>
           Already have an account?
-          <a href="/client/pages/signup.html">Log in</a>
+          <a href="/client/pages/login.html">Log in</a>
         </p>
       </section>
     </main>
