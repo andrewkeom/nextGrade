@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dispute Queue - nextGrade</title>
+    <link href="/client/styles/reset.css" rel="stylesheet" />
+    <link href="/client/styles/styles.css" rel="stylesheet" />
+    <link href="/client/styles/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="/client/index.html"
+          ><img src="/client/assets/logo.png" alt="logo" class="navbar-logo"
+        /></a>
+        <ul class="navbar-list-middle">
+          <li>
+            <a
+              href="/client/pages/admin/admin-dashboard.html"
+              id="admin-dashboard"
+              >Admin Dashboard</a
+            >
+          </li>
+          <li>
+            <a
+              href="/client/pages/admin/manage-curriculum.html"
+              id="manage-curriculum"
+              >Manage Curriculum</a
+            >
+          </li>
+          <li>
+            <a href="/client/pages/admin/dispute-queue.html" id="dispute-queue"
+              >Dispute Queue</a
+            >
+          </li>
+        </ul>
+
+        <ul class="navbar-list-right">
+          <a href="/client/pages/profile.html" id="profile">Profile</a>
+          <a href="/client/pages/login.html" id="login">Log In</a>
+          <a href="/client/pages/signup.html" id="signup">Sign Up</a>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header-with-filter">
+        <h1>Dispute Queue</h1>
+        <select id="statusFilter">
+          <option value="pending">Pending</option>
+          <option value="resolved">Resolved</option>
+        </select>
+      </section>
+
+      <section>
+        <div id="dispute-list"></div>
+        <template id="dispute-card-template">
+          <div class="card dispute-card">
+            <p class="dispute-card-title">
+              <a href="/client/pages/listing.html">Book Title, Author</a>
+            </p>
+            <p>Reported by: <span>PARENT NAME</span></p>
+            <p>Reason: <span>e.g. Price seems too high for the condition.</span></p>
+            <p>Asking Price: <span>e.g. 25$</span></p>
+            <p>AI Suggested Price: <span>e.g. 18$</span></p>
+            <div class="dispute-pending-controls">
+              <textarea placeholder="Admin response"></textarea>
+              <div class="dispute-override-row">
+                <input type="number" placeholder="Override price" />
+                <button class="btn-secondary">Override Price</button>
+              </div>
+              <button class="btn-danger">Flag Back to Seller</button>
+            </div>
+            <p class="dispute-resolution" hidden>Resolved: <span></span></p>
+          </div>
+        </template>
+        <div>
+          <p>No pending disputes.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-upper">
+        <div class="footer-upper-left">
+          <h3>nextGrade</h3>
+          <p>
+            A school community marketplace for buying, trading, and donating
+            curriculum books.
+          </p>
+        </div>
+        <div class="footer-upper-right">
+          <ul>
+            <li><a href="/client/index.html">Home</a></li>
+            <li><a href="/client/pages/curriculum.html">Curriculum</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-text">&copy; 2026 nextGrade. All rights reserved.</p>
+    </footer>
+
+    <script src="/client/scripts/axios.min.js"></script>
+    <script src="/client/scripts/state.js"></script>
+    <script src="/client/scripts/nav.js"></script>
+    <script src="/client/scripts/api.js"></script>
+    <script src="/client/scripts/auth-guard.js"></script>
+    <script src="/client/scripts/dispute-queue.js"></script>
+  </body>
+</html>
