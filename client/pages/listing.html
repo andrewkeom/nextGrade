@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marketplace - nextGrade</title>
+    <title>Listing - nextGrade</title>
     <link href="/client/styles/reset.css" rel="stylesheet" />
     <link href="/client/styles/styles.css" rel="stylesheet" />
     <link href="/client/styles/main.css" rel="stylesheet" />
@@ -48,43 +48,54 @@
     </header>
 
     <main>
-      <section>
-        <h2>Marketplace</h2>
-        <p class="marketplace-text">Find curriculum books from other parents at your school.</p>
-        <a href="/client/pages/create-listing.html" class="list-book-btn"><button>List a Book</button></a>
-      </section>
-
-      <section class="filter-bar">
-        <input type="search" placeholder="Search a book" id="listing-search" />
-      </section>
-
-      <section>
-        <div class="listing-grid card-grid" id="listing-grid"></div>
-        <template id="listing-card-template">
-          <div class="card listing-card">
-            <img src="" />
-            <h3>Subject - Grade <span>e.g. 2</span></h3>
-            <p>Book title, Author</p>
-            <p>Reference Price: <span>e.g. 10$</span></p>
-            <span class="condition-badge">DIFFERENT CONDITIONS</span>
-            <p>Listing Type: <span>Sell</span></p>
-            <div class="listing-price-block">
-              <p>Asking Price: <span>e.g. 25$</span></p>
-              <p>AI suggested price: <span>e.g. 30$</span></p>
-            </div>
-            <div class="type-badges">
-              <p>Free</p>
-              <p>Trade</p>
-            </div>
-            <p>PARENT NAME</p>
-            <a href="/client/pages/listing.html"
-              ><button class="btn-secondary">View Listing</button></a
-            >
-          </div>
+      <section class="section-card listing-gallery">
+        <img src="" alt="" id="listing-main-image" />
+        <div id="listing-thumbnails"></div>
+        <template id="thumbnail-template">
+          <img src="" alt="" />
         </template>
-        <div>
-          <p>No listings available.</p>
-        </div>
+      </section>
+
+      <section class="section-card listing-detail">
+        <h1></h1>
+        <p>Subject - Grade <span></span></p>
+        <p>Edition: <span></span></p>
+        <p>Reference Price: <span></span></p>
+        <p>Condition: <span></span></p>
+        <p>Listing Type: <span></span></p>
+        <p>Description</p>
+        <p></p>
+      </section>
+
+      <section class="section-card listing-pricing">
+        <p>Asking Price: <span></span></p>
+        <p>AI Suggested Price: <span></span></p>
+        <p>AI Justification: <span></span></p>
+      </section>
+
+      <section class="section-card listing-seller">
+        <p>Listed by <span></span></p>
+        <p>Listed on <span></span></p>
+      </section>
+
+      <section id="visitor-actions" class="section-card">
+        <h2>Message Seller</h2>
+        <form id="message-seller-form" class="form-narrow">
+          <textarea placeholder="Write a message to the seller"></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <textarea
+          id="report-price-reason"
+          placeholder="Reason (optional)"
+        ></textarea>
+        <button type="button" id="report-price-btn">Report Price</button>
+      </section>
+
+      <section id="owner-actions" class="section-card">
+        <h2>Manage Your Listing</h2>
+        <a href="/client/pages/edit-listing.html"><button type="button">Edit Listing</button></a>
+        <button type="button" id="mark-sold-btn" class="btn-secondary">Mark as Sold</button>
+        <button type="button" id="delete-listing-btn" class="btn-danger">Delete Listing</button>
       </section>
     </main>
 
@@ -112,6 +123,6 @@
     <script src="/client/scripts/state.js"></script>
     <script src="/client/scripts/nav.js"></script>
     <script src="/client/scripts/api.js"></script>
-    <script src="/client/scripts/marketplace.js"></script>
+    <script src="/client/scripts/listing.js"></script>
   </body>
 </html>
