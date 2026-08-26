@@ -1,0 +1,11 @@
+# Local secrets — never commit real credentials/API keys.
+server/includes/config.local.php
+
+# Uploaded listing photos / book covers shouldn't be committed either,
+# but keep the folders themselves tracked.
+uploads/*
+!uploads/.gitkeep
+!uploads/books
+!uploads/books/.gitkeep
+!uploads/listings
+!uploads/listings/.gitkeep
