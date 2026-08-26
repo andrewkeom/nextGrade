@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Listing - nextGrade</title>
+    <link href="/client/styles/reset.css" rel="stylesheet" />
+    <link href="/client/styles/styles.css" rel="stylesheet" />
+    <link href="/client/styles/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="/client/index.html"
+          ><img src="/client/assets/logo.png" alt="logo" class="navbar-logo"
+        /></a>
+        <ul class="navbar-list-middle">
+          <li>
+            <a href="/client/pages/dashboard.html" id="dashboard">Dashboard</a>
+          </li>
+          <li>
+            <a href="/client/pages/curriculum.html" id="curriculum"
+              >Curriculum</a
+            >
+          </li>
+          <li>
+            <a href="/client/pages/marketplace.html" id="marketplace"
+              >Marketplace</a
+            >
+          </li>
+          <li>
+            <a href="/client/pages/my-listings.html" id="listings"
+              >My Listings</a
+            >
+          </li>
+          <li>
+            <a href="/client/pages/messages.html" id="messages">Messages</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-list-right">
+          <a href="/client/pages/profile.html" id="profile">Profile</a>
+          <a href="/client/pages/admin/admin-dashboard.html" id="admin-panel" hidden>Admin Panel</a>
+          <a href="/client/pages/login.html" id="login">Log In</a>
+          <a href="/client/pages/signup.html" id="signup">Sign Up</a>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section-card">
+        <h1>Edit Listing</h1>
+        <form id="edit-listing-form" class="form-narrow">
+          <select id="bookGradeLevel">
+            <option value="">Select a grade</option>
+          </select>
+          <select id="bookSubject">
+            <option value="">Select a subject</option>
+          </select>
+          <select id="bookSelect">
+            <option value="">Select a book</option>
+          </select>
+
+          <select id="condition">
+            <option value="New">New</option>
+            <option value="Like New">Like New</option>
+            <option value="Good">Good</option>
+            <option value="Fair">Fair</option>
+            <option value="Poor">Poor</option>
+          </select>
+
+          <fieldset id="listingType">
+            <legend>Listing Type</legend>
+            <label><input type="radio" name="listingType" value="sell" checked /> Sell</label>
+            <label><input type="radio" name="listingType" value="trade" /> Trade</label>
+            <label><input type="radio" name="listingType" value="donate" /> Donate</label>
+          </fieldset>
+
+          <input type="number" placeholder="Asking price" id="askingPrice" />
+
+          <select id="status">
+            <option value="active">Active</option>
+            <option value="sold">Sold</option>
+            <option value="removed">Removed</option>
+          </select>
+
+          <textarea placeholder="Description" id="description"></textarea>
+
+          <input type="file" id="listingImages" multiple />
+
+          <div id="ai-price-preview" class="ai-price-preview">
+            <p>AI Suggested Price: <span></span></p>
+            <p>AI Justification: <span></span></p>
+          </div>
+
+          <button type="submit">Save Changes</button>
+        </form>
+        <button type="button" id="delete-listing-btn" class="btn-danger">
+          Delete Listing
+        </button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-upper">
+        <div class="footer-upper-left">
+          <h3>nextGrade</h3>
+          <p>
+            A school community marketplace for buying, trading, and donating
+            curriculum books.
+          </p>
+        </div>
+        <div class="footer-upper-right">
+          <ul>
+            <li><a href="/client/index.html">Home</a></li>
+            <li><a href="/client/pages/curriculum.html">Curriculum</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-text">&copy; 2026 nextGrade. All rights reserved.</p>
+    </footer>
+
+    <script src="/client/scripts/axios.min.js"></script>
+    <script src="/client/scripts/state.js"></script>
+    <script src="/client/scripts/nav.js"></script>
+    <script src="/client/scripts/api.js"></script>
+    <script src="/client/scripts/auth-guard.js"></script>
+    <script src="/client/scripts/edit-listing.js"></script>
+  </body>
+</html>
