@@ -6,9 +6,9 @@
     <title>Sign Up - nextGrade</title>
     <link href="/client/styles/reset.css" rel="stylesheet" />
     <link href="/client/styles/styles.css" rel="stylesheet" />
+    <link href="/client/styles/main.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- HEADER SECTION -->
     <header>
       <nav class="navbar">
         <a href="/client/index.html"
@@ -23,74 +23,70 @@
               >Curriculum</a
             >
           </li>
-          <li><a href="/client/pages/" id="marketplace">Marketplace</a></li>
-          <li><a href="/client/pages/" id="listings">My Listings</a></li>
-          <li><a href="/client/pages/" id="messages">Messages</a></li>
-          <li><a href="/client/pages/" id="disputes">Disputes</a></li>
+          <li>
+            <a href="/client/pages/marketplace.html" id="marketplace"
+              >Marketplace</a
+            >
+          </li>
+          <li>
+            <a href="/client/pages/my-listings.html" id="listings"
+              >My Listings</a
+            >
+          </li>
+          <li>
+            <a href="/client/pages/messages.html" id="messages">Messages</a>
+          </li>
         </ul>
 
         <ul class="navbar-list-right">
           <a href="/client/pages/profile.html" id="profile">Profile</a>
+          <a href="/client/pages/admin/admin-dashboard.html" id="admin-panel" hidden>Admin Panel</a>
           <a href="/client/pages/login.html" id="login">Log In</a>
           <a href="/client/pages/signup.html" id="signup">Sign Up</a>
         </ul>
       </nav>
     </header>
 
-    <!-- MAIN SECTION -->
     <main>
-      <section>
-        <h3>Create your nextGrade account</h3>
-        <p>
-          Join your school's parent marketplace and manage your children's
-          curriculum books.
-        </p>
-        <form>
-          <input type="text" placeholder="Enter your full name" id="name" />
-          <input type="email" placeholder="Enter your email" id="email" />
-          <input
-            type="password"
-            placeholder="Enter your password"
-            id="password"
-          />
-          <input
-            type="password"
-            placeholder="Confirm your password"
-            id="confirmPassword"
-          />
-          <p>Add your child</p>
-          <!-- Grade option values are placeholder grade_level ids; once
-               curriculum.php exists, this select will be populated per-school
-               from the grade_levels table instead of hardcoded here. -->
-          <div id="children-container">
-            <input type="text" id="childName" placeholder="Child's name" />
-            <select id="gradeLevel">
-              <option id="grade1" value="1">1st Grade</option>
-              <option id="grade2" value="2">2nd Grade</option>
-              <option id="grade3" value="3">3rd Grade</option>
-              <option id="grade4" value="4">4th Grade</option>
-              <option id="grade5" value="5">5th Grade</option>
-              <option id="grade6" value="6">6th Grade</option>
-              <option id="grade7" value="7">7th Grade</option>
-              <option id="grade8" value="8">8th Grade</option>
-              <option id="grade9" value="9">9th Grade</option>
-              <option id="grade10" value="10">10th Grade</option>
-              <option id="grade11" value="11">11th Grade</option>
-              <option id="grade12" value="12">12th Grade</option>
-            </select>
-          </div>
-          <button type="button" id="add-child-btn">+ Add another child</button>
-          <button type="submit">Sign up</button>
-        </form>
-        <hr />
-        <p>
-          Already have an account?
-          <a href="/client/pages/login.html">Log in</a>
-        </p>
+      <section class="auth-section">
+        <div class="auth-card">
+          <h3>Create your nextGrade account</h3>
+          <p>
+            Join your school's parent marketplace and manage your children's
+            curriculum books.
+          </p>
+          <form>
+            <input type="text" placeholder="Enter your full name" id="name" />
+            <input type="email" placeholder="Enter your email" id="email" />
+            <input
+              type="password"
+              placeholder="Enter your password"
+              id="password"
+            />
+            <input
+              type="password"
+              placeholder="Confirm your password"
+              id="confirmPassword"
+            />
+            <p>Add your child</p>
+            <div id="children-container">
+              <input type="text" id="childName" placeholder="Child's name" />
+              <select id="gradeLevel"></select>
+            </div>
+            <button type="button" id="add-child-btn" class="btn-secondary">
+              + Add another child
+            </button>
+            <button type="submit">Sign up</button>
+          </form>
+          <hr />
+          <p>
+            Already have an account?
+            <a href="/client/pages/login.html">Log in</a>
+          </p>
+        </div>
       </section>
     </main>
 
-    <!-- FOOTER SECTION -->
     <footer class="footer">
       <div class="footer-upper">
         <div class="footer-upper-left">
@@ -102,15 +98,19 @@
         </div>
         <div class="footer-upper-right">
           <ul>
-            <li>Home</li>
-            <li>Curriculum</li>
-            <li>Contact Us</li>
+            <li><a href="/client/index.html">Home</a></li>
+            <li><a href="/client/pages/curriculum.html">Curriculum</a></li>
+            <li><a href="#">Contact Us</a></li>
           </ul>
         </div>
       </div>
       <p class="footer-text">&copy; 2026 nextGrade. All rights reserved.</p>
     </footer>
 
-    <script src=""></script>
+    <script src="/client/scripts/axios.min.js"></script>
+    <script src="/client/scripts/state.js"></script>
+    <script src="/client/scripts/nav.js"></script>
+    <script src="/client/scripts/api.js"></script>
+    <script src="/client/scripts/signup.js"></script>
   </body>
 </html>
