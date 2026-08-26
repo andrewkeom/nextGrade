@@ -9,3 +9,5 @@ uploads/*
 !uploads/books/.gitkeep
 !uploads/listings
 !uploads/listings/.gitkeep
+
+CLAUDE.md
