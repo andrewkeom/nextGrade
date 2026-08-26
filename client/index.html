@@ -6,10 +6,9 @@
     <title>nextGrade - School Curriculum Book Marketplace</title>
     <link href="/client/styles/reset.css" rel="stylesheet" />
     <link href="/client/styles/styles.css" rel="stylesheet" />
-    <link href="/client/styles/index.css" rel="stylesheet" />
+    <link href="/client/styles/main.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- HEADER SECTION -->
     <header>
       <nav class="navbar">
         <a href="/client/index.html"
@@ -29,56 +28,61 @@
               >Marketplace</a
             >
           </li>
-          <li><a href="/client/pages/" id="listings">My Listings</a></li>
-          <li><a href="/client/pages/" id="messages">Messages</a></li>
-          <li><a href="/client/pages/" id="disputes">Disputes</a></li>
+          <li>
+            <a href="/client/pages/my-listings.html" id="listings"
+              >My Listings</a
+            >
+          </li>
+          <li>
+            <a href="/client/pages/messages.html" id="messages">Messages</a>
+          </li>
         </ul>
 
         <ul class="navbar-list-right">
           <a href="/client/pages/profile.html" id="profile">Profile</a>
+          <a href="/client/pages/admin/admin-dashboard.html" id="admin-panel" hidden>Admin Panel</a>
           <a href="/client/pages/login.html" id="login">Log In</a>
           <a href="/client/pages/signup.html" id="signup">Sign Up</a>
         </ul>
       </nav>
     </header>
 
-    <!-- MAIN SECTION -->
     <main>
       <section class="hero">
-        <div>
-          <div>
+        <div class="hero-content">
+          <div class="hero-text">
             <h1>Find your child's next grade, without the markup.</h1>
             <p>
               Buy, sell, trade, or donate curriculum books with other parents
               at your school.
             </p>
           </div>
-          <div>
+          <div class="hero-actions">
             <button>Get Started</button>
-            <button>Log In</button>
+            <button class="btn-secondary">Log In</button>
           </div>
         </div>
-        <div>
+        <div class="hero-image">
           <img src="" alt="" />
         </div>
       </section>
 
-      <section>
+      <section class="how-it-works">
         <h2>How it works</h2>
-        <ul>
-          <li>
+        <ul class="steps-list">
+          <li class="step-item">
             Create your account
             <p>Register and add your children with their grades.</p>
           </li>
-          <li>
+          <li class="step-item">
             Find curriculum books
             <p>Browse the books required for your child's grade.</p>
           </li>
-          <li>
+          <li class="step-item">
             Buy, sell, trade, or donate
             <p>Find books from other parents or list books you already own.</p>
           </li>
-          <li>
+          <li class="step-item">
             Get a fair price
             <p>
               Our pricing system suggests a reasonable price based on the book's
@@ -88,26 +92,26 @@
         </ul>
       </section>
 
-      <section>
-        <div>
+      <section class="features">
+        <div class="feature-card">
           <h3>Curriculum-based</h3>
           <p>Only books relevant to your school's curriculum are included.</p>
         </div>
-        <div>
+        <div class="feature-card">
           <h3>Parent marketplace</h3>
           <p>Buy, sell, trade, or donate books within the school community.</p>
         </div>
-        <div>
+        <div class="feature-card">
           <h3>Fair pricing</h3>
           <p>Get an AI-suggested price based on a book's condition and age.</p>
         </div>
-        <div>
+        <div class="feature-card">
           <h3>Safe community</h3>
           <p>Message other parents directly and report questionable pricing.</p>
         </div>
       </section>
 
-      <section>
+      <section class="pricing-explainer">
         <h2>Not sure what your book is worth?</h2>
         <p>nextGrade analyzes:</p>
         <ul>
@@ -118,15 +122,12 @@
         <p>and produces a suggested fair price.</p>
       </section>
 
-      <section>
+      <section class="cta">
         <h1>Ready to make next year's books easier?</h1>
-        <a href="/client/pages/signup.html"
-          ><button>Create an Account</button></a
-        >
+        <button id="cta-create-account">Create an Account</button>
       </section>
     </main>
 
-    <!-- FOOTER SECTION -->
     <footer class="footer">
       <div class="footer-upper">
         <div class="footer-upper-left">
@@ -138,15 +139,19 @@
         </div>
         <div class="footer-upper-right">
           <ul>
-            <li>Home</li>
-            <li>Curriculum</li>
-            <li>Contact Us</li>
+            <li><a href="/client/index.html">Home</a></li>
+            <li><a href="/client/pages/curriculum.html">Curriculum</a></li>
+            <li><a href="#">Contact Us</a></li>
           </ul>
         </div>
       </div>
       <p class="footer-text">&copy; 2026 nextGrade. All rights reserved.</p>
     </footer>
 
-    <script src=""></script>
+    <script src="/client/scripts/axios.min.js"></script>
+    <script src="/client/scripts/state.js"></script>
+    <script src="/client/scripts/nav.js"></script>
+    <script src="/client/scripts/api.js"></script>
+    <script src="/client/scripts/index.js"></script>
   </body>
 </html>

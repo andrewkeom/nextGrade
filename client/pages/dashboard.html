@@ -6,9 +6,9 @@
     <title>Dashboard - nextGrade</title>
     <link href="/client/styles/reset.css" rel="stylesheet" />
     <link href="/client/styles/styles.css" rel="stylesheet" />
+    <link href="/client/styles/main.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- HEADER SECTION -->
     <header>
       <nav class="navbar">
         <a href="/client/index.html"
@@ -23,81 +23,111 @@
               >Curriculum</a
             >
           </li>
-          <li><a href="/client/pages/" id="marketplace">Marketplace</a></li>
-          <li><a href="/client/pages/" id="listings">My Listings</a></li>
-          <li><a href="/client/pages/" id="messages">Messages</a></li>
-          <li><a href="/client/pages/" id="disputes">Disputes</a></li>
+          <li>
+            <a href="/client/pages/marketplace.html" id="marketplace"
+              >Marketplace</a
+            >
+          </li>
+          <li>
+            <a href="/client/pages/my-listings.html" id="listings"
+              >My Listings</a
+            >
+          </li>
+          <li>
+            <a href="/client/pages/messages.html" id="messages">Messages</a>
+          </li>
         </ul>
 
         <ul class="navbar-list-right">
           <a href="/client/pages/profile.html" id="profile">Profile</a>
+          <a href="/client/pages/admin/admin-dashboard.html" id="admin-panel" hidden>Admin Panel</a>
           <a href="/client/pages/login.html" id="login">Log In</a>
           <a href="/client/pages/signup.html" id="signup">Sign Up</a>
         </ul>
       </nav>
     </header>
 
-    <!-- MAIN SECTION -->
     <main>
-      <section>
-        <h1>Welcome back, <span>PARENT NAME</span></h1>
+      <section class="dashboard-welcome">
+        <h1>Welcome back, <span></span></h1>
         <p>Here's what's happening with your books and children.</p>
       </section>
 
-      <section>
+      <section class="section-card">
         <h2>My Children</h2>
-        <div class="child-grid" id="child-grid"></div>
+        <div class="child-grid card-grid" id="child-grid"></div>
         <template id="child-card-template">
-          <div>
+          <div class="card">
             <p>Child Name</p>
             <p>Child Grade</p>
-            <button>View Curriculum</button>
-            <button>Browse books</button>
+            <div class="card-actions">
+              <button>View Curriculum</button>
+              <button class="btn-secondary">Browse books</button>
+            </div>
           </div>
         </template>
       </section>
 
-      <section>
+      <section class="section-card">
         <h2>My Listings</h2>
-        <div>
-          <p>Active listings: <span id="active-listings-count">e.g. 1</span></p>
-          <p>Sold: <span id="sold-listings-count">e.g. 1</span></p>
-          <p>Pending: <span id="pending-listings-count">e.g. 1</span></p>
+        <div class="stats-row">
+          <p>Active listings: <span id="active-listings-count"></span></p>
+          <p>Sold: <span id="sold-listings-count"></span></p>
+          <p>Pending: <span id="pending-listings-count"></span></p>
         </div>
-        <a href="/client/pages/"><button>View My Listings</button></a>
+        <a href="/client/pages/my-listings.html"><button>View My Listings</button></a>
       </section>
 
-      <section>
+      <section class="section-card">
         <h2>Messages</h2>
         <p>
-          You have <span id="unread-messages-count">e.g. 2</span> unread
+          You have <span id="unread-messages-count"></span> unread
           messages.
         </p>
-        <button>View Messages</button>
+        <button id="view-messages-btn">View Messages</button>
       </section>
 
-      <section>
+      <section class="section-card">
         <h2>Price Reports</h2>
-        <p>No pending price reports.</p>
-        <p>
-          <span id="pending-price-reports-count">e.g. 1</span> listing has a
+        <p id="no-pending-reports">No pending price reports.</p>
+        <p id="pending-reports-text">
+          <span id="pending-price-reports-count"></span> listing has a
           pending price report.
         </p>
+
+        <h3>Admin Responses</h3>
+        <div id="resolved-reports-list" class="card-grid"></div>
+        <template id="resolved-report-template">
+          <div class="card">
+            <p class="resolved-report-book">Book title</p>
+            <p class="resolved-report-reason">Your reported reason</p>
+            <p class="resolved-report-response">Admin response text</p>
+            <a href="/client/pages/edit-listing.html"
+              ><button class="btn-secondary">Edit Listing</button></a
+            >
+          </div>
+        </template>
+        <p id="no-resolved-reports">No admin responses yet.</p>
       </section>
 
-      <section>
+      <section class="section-card">
         <h2>Quick Actions</h2>
-        <div>
+        <div class="quick-actions-grid">
           <button id="qa-marketplace">Browse Marketplace</button>
           <button id="qa-curriculum">Browse Curriculum</button>
-          <button id="qa-list">List a Book</button>
-          <button id="qa-listings">My Listings</button>
-          <button id="qa-message">Messages</button>
+          <a href="/client/pages/create-listing.html"
+            ><button id="qa-list">List a Book</button></a
+          >
+          <a href="/client/pages/my-listings.html"
+            ><button id="qa-listings">My Listings</button></a
+          >
+          <a href="/client/pages/messages.html"
+            ><button id="qa-message">Messages</button></a
+          >
         </div>
       </section>
     </main>
 
-    <!-- FOOTER SECTION -->
     <footer class="footer">
       <div class="footer-upper">
         <div class="footer-upper-left">
@@ -109,15 +139,20 @@
         </div>
         <div class="footer-upper-right">
           <ul>
-            <li>Home</li>
-            <li>Curriculum</li>
-            <li>Contact Us</li>
+            <li><a href="/client/index.html">Home</a></li>
+            <li><a href="/client/pages/curriculum.html">Curriculum</a></li>
+            <li><a href="#">Contact Us</a></li>
           </ul>
         </div>
       </div>
       <p class="footer-text">&copy; 2026 nextGrade. All rights reserved.</p>
     </footer>
 
-    <script src=""></script>
+    <script src="/client/scripts/axios.min.js"></script>
+    <script src="/client/scripts/state.js"></script>
+    <script src="/client/scripts/nav.js"></script>
+    <script src="/client/scripts/api.js"></script>
+    <script src="/client/scripts/auth-guard.js"></script>
+    <script src="/client/scripts/dashboard.js"></script>
   </body>
 </html>
